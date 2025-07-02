@@ -1,4 +1,4 @@
-# Karigari Kit
+# Karigari Kit (Work in Progress)
 
 *A hand-crafted design system stitched for speed, consistency, and dark-mode delight.*
 
