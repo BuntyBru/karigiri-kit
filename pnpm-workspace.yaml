@@ -1,0 +1,25 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+
+catalogs:
+  react18:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    "@types/react": ^18.2.45
+    "@types/react-dom": ^18.2.18
+
+  expo:
+    expo: ~50.0.0
+    react-native: 0.73.2
+    "@types/react-native": ^0.73.0
+
+  build:
+    tsup: ^8.0.1
+    rollup: ^4.9.1
+    vite: ^5.0.10
+
+  storybook:
+    "@storybook/react": ^7.6.6
+    "@storybook/react-vite": ^7.6.6
+    "@storybook/react-native": ^7.6.6 

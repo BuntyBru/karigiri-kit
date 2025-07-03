@@ -1,0 +1,39 @@
+{
+  "name": "@karigiri-kit/tailwind-config",
+  "version": "1.0.0",
+  "description": "Tailwind CSS configuration preset for Karigiri Kit",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@karigiri-kit/tokens": "workspace:*",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+} 

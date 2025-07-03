@@ -1,0 +1,36 @@
+{
+  "name": "karigiri-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A hand-crafted design system stitched for speed, consistency, and dark-mode delight",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean && rm -rf node_modules .turbo",
+    "tokens:build": "turbo tokens:build",
+    "tokens:build:web": "turbo tokens:build:web",
+    "tokens:build:rn": "turbo tokens:build:rn",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.10.4",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "dependencies": {
+    "pnpm": "^10.12.4"
+  }
+}

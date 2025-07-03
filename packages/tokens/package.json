@@ -1,0 +1,43 @@
+{
+  "name": "@karigiri-kit/tokens",
+  "version": "1.0.0",
+  "description": "Design tokens for Karigiri Kit",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./css": "./build/web/tokens.css",
+    "./scss": "./build/web/tokens.scss",
+    "./react-native": "./build/rn/tokens.ts"
+  },
+  "files": [
+    "dist",
+    "build",
+    "tokens.json"
+  ],
+  "scripts": {
+    "build": "pnpm clean && pnpm tokens:build && pnpm build:js",
+    "tokens:build": "pnpm tokens:build:web && pnpm tokens:build:rn",
+    "tokens:build:web": "style-dictionary build --config config/web.config.json",
+    "tokens:build:rn": "style-dictionary build --config config/rn.config.json",
+    "build:js": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist build",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "style-dictionary": "^3.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+} 

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        "build/**",
+        ".next/**",
+        "!.next/cache/**",
+        "storybook-static/**"
+      ]
+    },
+    "tokens:build": {
+      "outputs": [
+        "build/**",
+        "dist/**"
+      ]
+    },
+    "tokens:build:web": {
+      "outputs": [
+        "build/web/**"
+      ]
+    },
+    "tokens:build:rn": {
+      "outputs": [
+        "build/rn/**"
+      ]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "test": {
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+    "type-check": {
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
+    },
+    "storybook:build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "storybook-static/**"
+      ]
+    }
+  }
+} 
