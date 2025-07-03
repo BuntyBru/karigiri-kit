@@ -113,7 +113,7 @@ Add `build:swift` script to tokens package and update CI to run it on macOS and 
 
 ---
 
-## Next Actions for Cursor (v1.0)
+## Next Actions(v1.0)
 
 1. Scaffold Turborepo with pnpm workspaces.
 2. Create `packages/tokens` + initial JSON.
